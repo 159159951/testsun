@@ -1,7 +1,7 @@
 package com.appman.monocle
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_camera.*
 
 class CameraActivity : AppCompatActivity() {
@@ -11,7 +11,9 @@ class CameraActivity : AppCompatActivity() {
         setContentView(R.layout.activity_camera)
 
         // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+        sample_text.setOnClickListener {
+            sample_text.text = stringFromJNI()
+        }
     }
 
     /**
